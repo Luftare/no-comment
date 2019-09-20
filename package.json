@@ -1,0 +1,23 @@
+{
+  "name": "no-comment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "NoComment.js",
+  "scripts": {
+    "test:watch": "jest --watch",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^3.0.5",
+    "jest": "^24.9.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test",
+      "pre-push": "npm test"
+    }
+  }
+}
