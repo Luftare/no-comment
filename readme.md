@@ -14,7 +14,7 @@ while (1) {
 }
 ```
 
-We can do better. Let's bring in the DotComment:
+We can do better. Let's bring in the NoComment:
 
 ```javascript
 import NoComment from 'NoComment';
