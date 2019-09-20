@@ -39,7 +39,7 @@ while (1) {
 }
 ```
 
-Not a single comment and still 100% comprehensible code. As an extra benefit the comment text will be accessible as a string.
+Not a single comment and the code is 100% comprehensible. The comment is actual code and it has the full power of JS.
 
 <div id="api"></div>
 
