@@ -12,11 +12,6 @@ class NoComment {
     return this;
   }
 
-  clear() {
-    this.rawText = '';
-    return this;
-  }
-
   freeze() {
     Object.freeze(this);
     return this;

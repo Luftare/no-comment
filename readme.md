@@ -2,6 +2,16 @@
 
 As we all know, writing comments is bad. NoComment will overcome this by allowing you to write code that describes itself without having to write a single comment.
 
+#### Contents
+
+<ul>
+  <li><a href="#example">Example</a></li>
+  <li><a href="#api">API</a></li>
+  <li><a href="#how-to-contribute">How to contribute</a></li>
+</ul>
+
+<div id="example"></div>
+
 ## Example
 
 Old way...
@@ -29,3 +39,38 @@ while (1) {
 ```
 
 Not a single comment and still 100% comprehensible code. As an extra benefit the comment text will be accessible as a string.
+
+<div id="api"></div>
+
+## API
+
+### NoComment class
+
+`NoComment` class does not require any
+
+### NoComment instance
+
+#### Properties
+
+| property | type      | corresponding character |
+| -------- | --------- | ----------------------- |
+| a ... ö  | NoComment | same as property        |
+| A ... Ö  | NoComment | same as property        |
+| \_       | NoComment | space                   |
+
+#### Methods
+
+| method | arguments | return type | description                       |
+| ------ | --------- | ----------- | --------------------------------- |
+| \$     | string    | NoComment   | writes custom string              |
+| qst    |           | NoComment   | writes '?'                        |
+| exc    |           | NoComment   | writes '!'                        |
+| dot    |           | NoComment   | writes '.'                        |
+| com    |           | NoComment   | writes ','                        |
+| freeze |           |             | disables modifying of the comment |
+
+<div id="how-to-contribute"></div>
+
+## How to contribute
+
+Form this repository and make pull request to this master branch.

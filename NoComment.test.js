@@ -78,10 +78,4 @@ describe('noComment', () => {
     expect(comment.text).toEqual('Hello');
     expect(extendFrozenComment).toThrow(TypeError);
   });
-
-  it('can clear comment', () => {
-    const { text } = noComment.h.e.l.l.o.clear();
-
-    expect(text).toEqual('');
-  });
 });
