@@ -2,7 +2,7 @@
   "name": "no-comment",
   "version": "1.0.0",
   "description": "",
-  "main": "NoComment.js",
+  "main": "src/NoComment.js",
   "scripts": {
     "pretest": "eslint .",
     "test:watch": "jest --watch",
