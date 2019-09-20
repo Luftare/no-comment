@@ -5,14 +5,15 @@ As we all know, writing comments is bad. NoComment will overcome this by allowin
 #### Contents
 
 <ul>
-  <li><a href="#example">Example</a></li>
+  <li><a href="#demo">Demo</a></li>
   <li><a href="#api">API</a></li>
+  <li><a href="#examples">Examples</a></li>
   <li><a href="#how-to-contribute">How to contribute</a></li>
 </ul>
 
-<div id="example"></div>
+<div id="demno"></div>
 
-## Example
+## Demo
 
 Old way...
 
@@ -46,17 +47,21 @@ Not a single comment and still 100% comprehensible code. As an extra benefit the
 
 ### NoComment class
 
-`NoComment` class does not require any
+`NoComment` class does not take any arguments.
+
+```javascript
+const comment = new NoComment();
+```
 
 ### NoComment instance
 
 #### Properties
 
-| property | type      | corresponding character |
-| -------- | --------- | ----------------------- |
-| a ... ö  | NoComment | same as property        |
-| A ... Ö  | NoComment | same as property        |
-| \_       | NoComment | space                   |
+| property | type      | description                    |
+| -------- | --------- | ------------------------------ |
+| a ... ö  | NoComment | writes corresponding character |
+| A ... Ö  | NoComment | writes corresponding character |
+| \_       | NoComment | writes space                   |
 
 #### Methods
 
@@ -67,7 +72,45 @@ Not a single comment and still 100% comprehensible code. As an extra benefit the
 | exc    |           | NoComment   | writes '!'                        |
 | dot    |           | NoComment   | writes '.'                        |
 | com    |           | NoComment   | writes ','                        |
-| freeze |           |             | disables modifying of the comment |
+| freeze |           | NoComment   | disables modifying of the comment |
+
+<div id="examples"></div>
+
+## Examples
+
+#### Basic use
+
+```javascript
+const {
+  text: helloWordComment,
+} = new NoComment().H.e.l.l.o.com()._.W.o.r.l.d.dot();
+
+console.log(helloWorldComment);
+```
+
+Above code will yield `Hello, world.`
+
+#### Extending comment
+
+```javascript
+const comment = new NoComment().S.o.m.e.t.h.i.n.g;
+
+new NoComment().L.a.t.e.r
+  .dot()
+  .dot()
+  .dot();
+
+comment._.S.o.m.e.t.h.i.n.g._.e.l.s.e;
+```
+
+#### Freesing comment
+
+```javascript
+const comment = new NoComment().F.i.n.a.l._.n.o.t.e.freeze();
+
+new NoComment().B.e.l.o.w._.t.h.r.o.w.s._.T.y.p.e.E.r.r.o.r.exc();
+comment._.t.r.i.e.s._.t.o._.c.o.n.t.i.n.u.e;
+```
 
 <div id="how-to-contribute"></div>
 

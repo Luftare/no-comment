@@ -1,14 +1,14 @@
 class NoComment {
   constructor() {
-    this.rawText = '';
+    this._rawText = '';
   }
 
   get text() {
-    return this.rawText.replace(/_/g, ' ');
+    return this._rawText.replace(/_/g, ' ');
   }
 
   $(character) {
-    this.rawText += character;
+    this._rawText += character;
     return this;
   }
 
