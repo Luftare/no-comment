@@ -88,27 +88,33 @@ const {
 console.log(helloWorldComment);
 ```
 
-Above code will yield `Hello, world.`
+Above code yields `Hello, World.`
 
 #### Extending comment
 
 ```javascript
 const comment = new NoComment().S.o.m.e.t.h.i.n.g;
 
+console.log(comment.text);
+
 new NoComment().L.a.t.e.r
   .dot()
   .dot()
   .dot();
 
-comment._.S.o.m.e.t.h.i.n.g._.e.l.s.e;
+const { text: extendedComment } = comment._.e.l.s.e;
+
+console.log(extendedComment);
 ```
 
-#### Freesing comment
+Above code first yields `Something` then `Something else`
+
+#### Freezing comment
 
 ```javascript
 const comment = new NoComment().F.i.n.a.l._.n.o.t.e.freeze();
 
-new NoComment().B.e.l.o.w._.t.h.r.o.w.s._.T.y.p.e.E.r.r.o.r.exc();
+new NoComment().B.e.l.o.w._.l.i.n.e._.t.h.r.o.w.s._.T.y.p.e.E.r.r.o.r;
 comment._.t.r.i.e.s._.t.o._.c.o.n.t.i.n.u.e;
 ```
 
