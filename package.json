@@ -4,6 +4,7 @@
   "description": "",
   "main": "NoComment.js",
   "scripts": {
+    "pretest": "eslint .",
     "test:watch": "jest --watch",
     "test": "jest"
   },
@@ -11,6 +12,9 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
     "husky": "^3.0.5",
     "jest": "^24.9.0"
   },

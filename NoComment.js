@@ -4,16 +4,26 @@ class NoComment {
   }
 
   get text() {
-    return this.rawText; //.replace(/_/g, ' ');
+    return this.rawText.replace(/_/g, ' ');
   }
 
   $(character) {
     this.rawText += character;
     return this;
   }
+
+  clear() {
+    this.rawText = '';
+    return this;
+  }
+
+  freeze() {
+    Object.freeze(this);
+    return this;
+  }
 }
 
-const alphabets = 'abcdefghiklmnopqrstvwxyzåäö'.split('');
+const alphabets = 'abcdefghiklmnopqrstuvwxyzåäö'.split('');
 const upperCaseAlphabets = alphabets.map(letter => letter.toUpperCase());
 const specialCharacters = ['_'];
 const characters = [...alphabets, ...upperCaseAlphabets, ...specialCharacters];
@@ -34,9 +44,13 @@ const characterMethodPairs = [
 ];
 
 characterMethodPairs.forEach(([methodName, character]) => {
-  NoComment.prototype[methodName] = function() {
-    return this.$(character);
-  };
+  new NoComment().N.a.m.e.d._.f.u.n.c.t.i.o.n._.e.x.p.r.e.s.s.i.o.n.freeze();
+
+  NoComment.prototype[methodName] = {
+    [methodName]() {
+      return this.$(character);
+    },
+  }[methodName];
 });
 
 module.exports = NoComment;

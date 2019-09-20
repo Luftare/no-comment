@@ -1,6 +1,6 @@
 const DotComment = require('./NoComment');
 
-const ALPHABETS = 'abcdefghiklmnopqrstvwxyzåäö'.split('');
+const ALPHABETS = 'abcdefghiklmnopqrstuvwxyzåäö'.split('');
 const UPPERCASE_ALPHABETS = ALPHABETS.map(letter => letter.toUpperCase());
 
 describe('noComment', () => {
@@ -66,5 +66,22 @@ describe('noComment', () => {
     const { text } = dotComment.$(':').$(')');
 
     expect(text).toEqual(':)');
+  });
+
+  it('can freeze comment', () => {
+    const comment = dotComment.H.e.l.l.o.freeze();
+
+    const extendFrozenComment = () => {
+      comment._.com().W.o.r.l.d;
+    };
+
+    expect(comment.text).toEqual('Hello');
+    expect(extendFrozenComment).toThrow(TypeError);
+  });
+
+  it('can clear comment', () => {
+    const { text } = dotComment.h.e.l.l.o.clear();
+
+    expect(text).toEqual('');
   });
 });
