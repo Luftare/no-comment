@@ -47,7 +47,7 @@ Not a single comment and the code is 100% comprehensible. The comment is actual 
 
 ### NoComment class
 
-`NoComment` class does not take any arguments.
+`NoComment` class does not take any arguments.
 
 ```javascript
 const comment = new NoComment();
@@ -122,4 +122,4 @@ comment._.t.r.i.e.s._.t.o._.c.o.n.t.i.n.u.e;
 
 ## How to contribute
 
-Form this repository and make pull request to this master branch.
+Fork this repository and make pull request to this master branch.
